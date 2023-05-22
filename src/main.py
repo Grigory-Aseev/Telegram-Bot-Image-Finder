@@ -62,7 +62,15 @@ for i in range(0, len(buttons_numbers_emoji_code), 3):
     keyboard_code.row(
         InlineKeyboardButton(buttons_numbers_emoji_code[i][0], callback_data=buttons_numbers_emoji_code[i][1]),
         InlineKeyboardButton(buttons_numbers_emoji_code[i + 1][0],
-                             callback_data=buttons_numb                                                t"),
+                             callback_data=buttons_numbers_emoji_code[i + 1][1]),
+        InlineKeyboardButton(buttons_numbers_emoji_code[i + 2][0],
+                             callback_data=buttons_numbers_emoji_code[i + 2][1]))
+
+keyboard_phone.row(InlineKeyboardButton(buttons_special_emoji[0], callback_data="preset"),
+                   InlineKeyboardButton(buttons_special_emoji[1], callback_data="p0"),
+                   InlineKeyboardButton(buttons_special_emoji[2], callback_data="psend"))
+
+keyboard_code.row(InlineKeyboardButton(buttons_special_emoji[0], callback_data="creset"),
                   InlineKeyboardButton(buttons_special_emoji[1], callback_data="c0"),
                   InlineKeyboardButton(buttons_special_emoji[2], callback_data="csend"))
 
